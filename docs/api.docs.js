@@ -35,7 +35,7 @@ module.exports = {
        <p>400: A validation or client side error occurred and the request was not fulfilled.<p>
        <p>401: The request was not authorized. This can be triggered by passing an invalid token in the authorization header or the lack of one.<p>
        <p>404: Request could not be fulfilled as the request resource does not exist.<p>
-       <p>500, 501, 502, 503, 504: Request could not be fulfilled due to an error on wallet service end.<p>
+       <p>500, 501, 502, 503, 504: Request could not be fulfilled due to an error on reditclone end.<p>
       `,
       license: {
         name: 'Licensed Under MIT',
