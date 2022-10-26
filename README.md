@@ -2,16 +2,19 @@
 
 Reddit clone built with Node.js, Express, and MongoDB.
 
-Deployed at 
+Deployed at https://thenewreddit.herokuapp.com
 
 ## Doc
-Api documentation => 
+simple Api documentation => https://thenewreddit.herokuapp.com/docs/
 
 ## Features
 - JWT authentication
 - User authentication
 - Create, update, and delete posts and comments
 - Create subreddits
+- API documentation
+- Mongodb’s change streams
+- Simple audit trail 
 
 
 ## Installation
@@ -25,7 +28,7 @@ cd reddit-clone
 2. Install backend dependencies
 
 ```
-cd backend
+cd redditclone
 npm install
 ```
 
@@ -33,6 +36,5 @@ npm install
 3. Start server
 
 ```
-cd backend
 npm start
 ```
