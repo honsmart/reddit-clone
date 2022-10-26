@@ -11,7 +11,19 @@ var authMiddleWare = require("../middlewares/auth.middleware")
  *     description: Logout your account
  *     tags:
  *       - Subreddit
-  *     responses:
+ *     requestBody:
+ *        content:
+ *           application/json:
+ *             schema:
+ *                type: object
+ *                properties:
+ *                   name:
+ *                      type: string
+ *                   title:
+ *                      type: string
+ *                   description:
+ *                      type: string
+ *     responses:
  *       200:
  *         description: Succuess.
  *         content:
@@ -36,7 +48,7 @@ var authMiddleWare = require("../middlewares/auth.middleware")
  *                         description: token.
  *                         example: {"user": "honsmart", "name": "1", "title": "hey", "description": "hey", "_id": "63589ff4f30e837ff565cd7a", "createdAt": "2022-10-26T02:48:20.118Z", "updatedAt": "2022-10-26T02:48:20.118Z", "__v": 0}
  *       500:
- *         description: Succuess.
+ *         description: Error.
  *         content:
  *           application/json:
  *             schema:
@@ -45,7 +57,7 @@ var authMiddleWare = require("../middlewares/auth.middleware")
  *                 statusCode:
  *                         type: string
  *                         description: status code.
- *                         example: 201
+ *                         example: 500
  *                 success:
  *                         type: boolean
  *                         description: success.
@@ -69,6 +81,18 @@ router.post('/create', authMiddleWare, subredditController.Create);
  *     description: Edit Subreddit
  *     tags:
  *       - Subreddit
+ *     requestBody:
+ *        content:
+ *           application/json:
+ *             schema:
+ *                type: object
+ *                properties:
+ *                   name:
+ *                      type: string
+ *                   title:
+ *                      type: string
+ *                   description:
+ *                      type: string
  *     responses:
  *       200:
  *         description: Succuess.
@@ -94,7 +118,7 @@ router.post('/create', authMiddleWare, subredditController.Create);
  *                         description: token.
  *                         example: {"acknowledged": true, "modifiedCount": 1, "upsertedId": null, "upsertedCount": 0, "matchedCount": 1}
  *       500:
- *         description: Succuess.
+ *         description: Error.
  *         content:
  *           application/json:
  *             schema:
@@ -103,7 +127,7 @@ router.post('/create', authMiddleWare, subredditController.Create);
  *                 statusCode:
  *                         type: string
  *                         description: status code.
- *                         example: 201
+ *                         example: 500
  *                 success:
  *                         type: boolean
  *                         description: success.

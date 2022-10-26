@@ -11,6 +11,28 @@ var authMiddleWare = require("../middlewares/auth.middleware")
  *     description: Creat new post under subreddit
  *     tags:
  *       - Post
+ *     requestBody:
+ *        content:
+ *           application/json:
+ *             schema:
+ *                type: object
+ *                properties:
+ *                   post_type:
+ *                      type: string
+ *                      example: crypto
+ *                   body:
+ *                      type: string
+ *                      example: Hello world
+ *                   name:
+ *                      type: string
+ *                      example: world
+ *                   title:
+ *                      type: string
+ *                   subreddit_id:
+ *                      type: string
+ *                      example: 6358042b98f7a61570fc8a02
+ *                   description:
+ *                      type: string
  *     responses:
  *       200:
  *         description: Succuess.
@@ -36,7 +58,7 @@ var authMiddleWare = require("../middlewares/auth.middleware")
  *                         description: token.
  *                         example: {"post_type": "hey", "title": "ws", "body": "new iphone", "author": "honsmart", "subreddit_id": "63581c6109f0f7756ab94849", "description": "s", "_id": "63585d06ee615e7e2e3cba64", "createdAt": "2022-10-25T22:02:46.409Z", "updatedAt": "2022-10-25T22:02:46.409Z", "__v": 0}
  *       500:
- *         description: Succuess.
+ *         description: Error.
  *         content:
  *           application/json:
  *             schema:
@@ -45,7 +67,7 @@ var authMiddleWare = require("../middlewares/auth.middleware")
  *                 statusCode:
  *                         type: string
  *                         description: status code.
- *                         example: 201
+ *                         example: 500
  *                 success:
  *                         type: boolean
  *                         description: success.

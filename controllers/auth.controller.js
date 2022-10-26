@@ -42,7 +42,14 @@ exports.Register = async (req, res) => {
                 statusCode: "201",
                 success: true,
                 message: 'Success',
-                user: saveUser
+                user: {
+                    "email": saveUser.email,
+                    "userName": saveUser.userName,
+                    "_id": saveUser._id,
+                    "createdAt": saveUser.createdAt,
+                    "updatedAt": saveUser.updatedAt,
+                    "__v": saveUser.__v
+                }
             })
         }
 

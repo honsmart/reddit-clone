@@ -7,7 +7,7 @@ module.exports = {
       `REDITCLONE API documentation <br> 
       <h2>Authentication<h2>
       <h3>token</h3>
-      <p>Authenticate your API calls by including your token in the Authorization header of every request you make</p>
+      <p>Authenticate your API calls by including your token in the Authorization header of every request you make to logout, subreddit, post and comment</p>
       <p>You will use this token in your request's Authorization header. Here is an example:<br><br><br><code> Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywicGhvbmVOdW1iZXIiOjIzNDkwMDAwMDAwMDAsImlhdCI6MTY2NTYyNDcxNywiZXhwIjoxNjY1NjI1NjE3fQ.ydQrT-l7JlMvImV29_uaWKNkUs4vm8yZbhxcazq1Ggg </code></p>
       <h3>Token</h3>
       <p>To aquire token:</p>
@@ -52,7 +52,7 @@ module.exports = {
         description: 'Development server',
       },
       {
-        url: 'http://localhost:3000',
+        url: 'ttps://thenewreddit.herokuapp.com',
         description: 'Live server',
       },
     ],

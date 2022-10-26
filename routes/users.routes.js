@@ -11,6 +11,20 @@ var authMiddleWare = require("../middlewares/auth.middleware")
  *     description: Registe a new account
  *     tags:
  *       - Users
+ *     requestBody:
+ *        content:
+ *           application/json:
+ *             schema:
+ *                type: object
+ *                properties:
+ *                   email:
+ *                      type: string
+ *                   userName:
+ *                      type: string
+ *                   passWord:
+ *                      type: string
+ *                   passwordConfirm:
+ *                      type: string
  *     responses:
  *       200:
  *         description: Succuess.
@@ -36,7 +50,7 @@ var authMiddleWare = require("../middlewares/auth.middleware")
  *                         description: token.
  *                         example: {"email": "adegboye@gmail.com", "userName": "adegboye", "_id": "6358a093c97def6618767d12", "createdAt": "2022-10-26T02:50:59.787Z", "updatedAt": "2022-10-26T02:50:59.787Z", "__v": 0}
  *       500:
- *         description: Succuess.
+ *         description: Error.
  *         content:
  *           application/json:
  *             schema:
@@ -45,7 +59,7 @@ var authMiddleWare = require("../middlewares/auth.middleware")
  *                 statusCode:
  *                         type: string
  *                         description: status code.
- *                         example: 201
+ *                         example: 500
  *                 success:
  *                         type: boolean
  *                         description: success.
@@ -70,6 +84,16 @@ router.post('/register', userController.Register);
  *     description: Login with your email and password
  *     tags:
  *       - Users
+ *     requestBody:
+ *        content:
+ *           application/json:
+ *             schema:
+ *                type: object
+ *                properties:
+ *                   email:
+ *                      type: string
+ *                   passWord:
+ *                      type: string
  *     responses:
  *       200:
  *         description: Succuess.
@@ -95,7 +119,7 @@ router.post('/register', userController.Register);
  *                         description: token.
  *                         example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkZWdib3llb3BleWVtaUBnbWFpbC5jb20iLCJpYXQiOjE2NjY3NDQyNjh9.VHgj2bGXanMkvIo1FjzCCRuIt4FEdgVj5ws0i7pMkhg
  *       500:
- *         description: Succuess.
+ *         description: Error.
  *         content:
  *           application/json:
  *             schema:
@@ -104,7 +128,7 @@ router.post('/register', userController.Register);
  *                 statusCode:
  *                         type: string
  *                         description: status code.
- *                         example: 201
+ *                         example: 500
  *                 success:
  *                         type: boolean
  *                         description: success.
@@ -152,7 +176,7 @@ router.post('/login', userController.Login);
  *                         description: Success.
  *                         example: Success
  *       500:
- *         description: Succuess.
+ *         description: Error.
  *         content:
  *           application/json:
  *             schema:
@@ -161,7 +185,7 @@ router.post('/login', userController.Login);
  *                 statusCode:
  *                         type: string
  *                         description: status code.
- *                         example: 201
+ *                         example: 500
  *                 success:
  *                         type: boolean
  *                         description: success.
